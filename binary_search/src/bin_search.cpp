@@ -33,7 +33,7 @@ int *bsearch (int *first, int *last, int target){
 
                 // Resizes the current array turning it into the right half sub array
                 first = mid + 1;
-                count = count - (step - 1);
+                count = count - step - 1;
             }
         }
     }
