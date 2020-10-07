@@ -1,5 +1,7 @@
 #include "../include/driver_lsearch.h"
 
+using namespace std;
+
 int main (){
 
     int A[]{ 9, 2, 1, 4, -2, 0, 5, 12 };
@@ -9,17 +11,17 @@ int main (){
     int target {5};
 
     // Show the search array
-    std::cout << ">>> The array: ";
-    print( std::begin(A), std::end(A) );
-    std::cout << std::endl;
+    cout << ">>> The array: ";
+    print( begin(A), end(A) );
+    cout << endl;
 
-    int *result = lin_search( std::begin(A), std::end(A), target );
+    int *result = lin_search( begin(A), end(A), target );
 
     if (result == std::end(A))
-        std::cout << "\t-- Could not find " << target << "." << std::endl;
+        cout << "\t-- Could not find " << target << "." << endl;
     else
-        std::cout << "\t-- Found " << target << " at location "
-            << result - std::begin(A) << std::endl;
+        cout << "\t-- Found " << target << " at location "
+            << result - begin(A) << endl;
 
     return 0;
 }
